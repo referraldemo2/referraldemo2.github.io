@@ -2,8 +2,8 @@ var referralApp = angular.module('referralApp', ['ngMaterial', 'ngRoute', 'ngMes
 
 referralApp.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('pink')
-    .accentPalette('orange');
+    .primaryPalette('#940302')
+    .accentPalette('#940302');
 });
 
 referralApp.filter('unsafe', function ($sce) {
