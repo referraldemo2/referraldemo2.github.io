@@ -91,7 +91,7 @@ self.addEventListener('install', function (event) {
             );
 });
 self.addEventListener('fetch', function (event) {
-    if( event.request.url.match(/referraldemo.github.io/) == null ) return;
+    if( event.request.url.match(/referraldemo2.github.io/) == null ) return;
     event.respondWith(
             caches.match(event.request)
             .then(function (response) {
