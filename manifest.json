@@ -8,8 +8,8 @@
         "type": "image/png"
     }
     ],
-    "background_color":"#04537C",
-    "theme_color":"#3F51B5",
+    "background_color":"#940302",
+    "theme_color":"#940302",
     "start_url": "/index.html",
     "display": "standalone",
     "gcm_sender_id": "583379521382"
