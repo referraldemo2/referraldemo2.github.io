@@ -1,5 +1,11 @@
 var referralApp = angular.module('referralApp', ['ngMaterial', 'ngRoute', 'ngMessages']);
 
+referralApp.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('default')
+    .primaryPalette('pink')
+    .accentPalette('orange');
+});
+
 referralApp.filter('unsafe', function ($sce) {
     return function (input) {
         return $sce.trustAsHtml(input);
