@@ -1,0 +1,65 @@
+<md-dialog aria-label="Job Description" ng-cloak ng-controller="JobDescCtrl">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Job Description</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon aria-label="Close dialog">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="md-padding">
+
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline" ng-bind="jobs[jobId].title"></span>
+                        <span class="md-subhead" ng-if="jobs[jobId].rewards">
+                            Rewards: <span ng-bind="jobs[jobId].rewards"></span>
+                        </span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                    <table class="card-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                        <md-icon>place</md-icon> Location
+                        </td>
+                        <td>
+                            <span ng-bind="jobs[jobId].loc"></span>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <md-icon>card_travel</md-icon> Experience
+                        </td>
+                        <td>
+                            <span ng-bind="jobs[jobId].exp"></span> years
+                        </td>
+                        </tr>
+                        <tr ng-if="jobs[jobId].salary">
+                            <td>
+                        <md-icon>local_atm</md-icon> Salary
+                        </td>
+                        <td>
+                            <span ng-bind="jobs[jobId].salary"></span>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="md-padding">
+                                <span ng-bind-html="jobs[jobId].desc|unsafe"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </p>
+                </md-card-content>
+            </md-card>
+        </md-dialog-content>
+    </form>
+</md-dialog>
+
+
